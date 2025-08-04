@@ -36,7 +36,7 @@ async function main() {
 
     // Copy template files
     const templateDir = join(__dirname, '../template');
-    const files = ['nodemon.json', 'tsconfig.json', '.gitignore'];
+    const files = ['nodemon.json', 'tsconfig.json'];
 
     await Promise.all(
       files.map(async (file) =>
@@ -77,6 +77,10 @@ async function main() {
       `console.log('Hello world!');\n`
     );
 
+    await writeFile(
+      join(targetDir, '.gitignore'),
+      ['/node_modules', '/build', '.env', ''].join('\n')
+    );
     await exec('git init', { cwd: targetDir });
     await exec('git add .', { cwd: targetDir });
     await exec(`git commit -m 'Initial commit'`, { cwd: targetDir });
