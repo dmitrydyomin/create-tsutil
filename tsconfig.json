@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "CommonJS",
+    "outDir": "./build",
+    "rootDir": "./src",
+    "skipLibCheck": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "target": "es2024",
+    "lib": ["es2024"]
+  },
+  "exclude": ["./src/**/*.spec.ts"],
+  "ts-node": { "files": true }
+}
