@@ -67,7 +67,7 @@ async function main() {
       )
     );
 
-    await exec('npm i -D typescript ts-node nodemon dotenv', {
+    await exec('npm i -D typescript ts-node nodemon dotenv @types/node', {
       cwd: targetDir,
     });
 
